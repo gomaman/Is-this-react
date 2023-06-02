@@ -1,13 +1,13 @@
 import arrow from '../../../images/arrow.svg'
 import MainNewsItem from './MainNewsItem'
 import SideNewsItem from './SideNewsItem'
+import LargeButton from "../../Buttons/LargeButton"
 
 function News() {
     return (
         <section className="news">
-            <div className="main-news">
-
             <h1 className="page-header">Naujienos</h1>
+            <div className="main-news">
             
                 <MainNewsItem
                     img="https://codeacademy.lt/wp-content/uploads/2023/01/pexels-christina-morillo-1181467-1536x1025.jpg"
@@ -59,7 +59,10 @@ function News() {
 
             </div>
 
-            <a className="large-button arrow" href="#">Visos naujienos <img src={arrow} /></a>
+            <LargeButton
+            text="Visos Naujienos"
+            href="#"
+            ></LargeButton>
         </section>
     )
 }

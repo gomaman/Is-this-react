@@ -1,4 +1,4 @@
-import podcastImage from '../../../../images/podcast-image.jpg'
+
 import PodcastItem from './PodcastItem'
 
 function PodcastList () {

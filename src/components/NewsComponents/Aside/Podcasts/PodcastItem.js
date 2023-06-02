@@ -1,7 +1,6 @@
 import podcastImage from '../../../../images/podcast-image.jpg'
 
 function PodcastItem (props) {
-    console.log(props)
     return (
         <div className="podcast-item">
         <div className="podcast-controls">
