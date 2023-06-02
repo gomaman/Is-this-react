@@ -1,16 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Contact from './Pages/ContactUsPage/Contact'
-import Programs from './Pages/ProgramsPage/Programs';
-import Newspage from './Pages/NewsPage/Newspage';
-
+import App from './Pages/TestPage/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Contact />
-    <Programs/>
-    <Newspage/>
+    <App></App>
   </React.StrictMode>
 );

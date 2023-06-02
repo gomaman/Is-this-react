@@ -3,7 +3,7 @@ import News from '../../components/NewsComponents/News/NewsList'
 import Video from '../../components/NewsComponents/Video/VideoList'
 import PodcastList from '../../components/NewsComponents/Aside/Podcasts/PodcastList'
 import EventList from '../../components/NewsComponents/Aside/Events/EventList'
-function Newspage() {
+function NewsPage() {
     return (
         <div className="container">
             <div className="content-wrapper">
@@ -22,4 +22,4 @@ function Newspage() {
 }
 
 
-export default Newspage
+export default NewsPage
