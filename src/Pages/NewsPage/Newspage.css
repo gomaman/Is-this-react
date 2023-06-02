@@ -90,20 +90,12 @@
   }
   
   .secondary-news {
-    /* display: flex;
-    flex-wrap: wrap;
-    gap: 30px; */
-  
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 30px;
   }
-  
-  .secondary-news .news-article {
-    /* width: calc((100% - 30px) / 2); */
-  }
-  
+   
   .secondary-news .news-article a {
     display: flex;
   }
