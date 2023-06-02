@@ -7,9 +7,7 @@ function Newspage() {
     return (
         <div className="container">
             <div className="content-wrapper">
-                
                 <main className="main-content">
-                    <h1 className="page-header">Naujienos</h1>
                     <News></News>
                     <Video></Video>
                 </main>

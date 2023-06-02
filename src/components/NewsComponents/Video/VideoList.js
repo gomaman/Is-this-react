@@ -1,14 +1,15 @@
+import VideoItem from "./VideoItem"
 function Video() {
     return (
         <section className="video">
+
         <h2 className="section-title">Vaizdo įrašai</h2>
 
-        <div className="video-wrapper">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/b8dGCsP75HA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-        </div>
-
-        <span className="extra-text">Jei galiu aš – gali ir tu!</span>
-
+            <VideoItem
+            src="https://www.youtube.com/embed/b8dGCsP75HA"
+            title="Jei galiu aš – gali ir tu!"
+            ></VideoItem>
+            
         <a className="large-button arrow" href="#">
             Visi vaizdo įrašai
             <svg xmlns='http://www.w3.org/2000/svg' width='19' height='33'>

@@ -1,51 +1,42 @@
+import ProgramFilterFieldSet from "./ProgramFilterFieldSet"
+import ProgramFormControlItem from "./ProgramFormControl"
+
 function ProgramFilter () {
     
     return (
-        <div className="programs-filter">
+      <div className="programs-filter">
         <form className="program-filter-form">
+          
           <span className="programs-found">Rastos 55 programos</span>
 
-          <div className="form-control">
-            <label htmlFor="program-theme">Tema</label>
-            <select id="program-theme">
-              <option>Visos</option>
-              <option>Programavimas</option>
-              <option>Dizainas</option>
-            </select>
-          </div>
+          <ProgramFormControlItem
+          theme="Tema"
+          option1="Visos"
+          option2="Programavimas"
+          option3="Dizainas"
+          ></ProgramFormControlItem>
 
-          <div className="form-control">
-            <label htmlFor="program-location">Vieta</label>
-            <select id="program-location">
-              <option>Visos</option>
-              <option>Vilnius</option>
-              <option>Kaunas</option>
-            </select>
-          </div>
+          <ProgramFormControlItem
+          theme="Vieta"
+          option1="Visos"
+          option2="Vilnius"
+          option3="Kaunas"
+          ></ProgramFormControlItem>
 
-          <div className="form-control">
-            <label htmlFor="program-type">Tipas</label>
-            <select id="program-type">
-              <option>Visos</option>
-              <option>Programavimas</option>
-              <option>Dizainas</option>
-            </select>
-          </div>
+          <ProgramFormControlItem
+          theme="Tipas"
+          option1="Visos"
+          option2="Programavimas"
+          option3="Dizainas"
+          ></ProgramFormControlItem>
 
-          <fieldset className="checkbox-wrapper">
-            <legend>Laikas</legend>
+          <ProgramFilterFieldSet
+          legend="Laikas"
+          timeOption="Dienomis"
+          timeOption2="Vakarais"
+          ></ProgramFilterFieldSet>
 
-            <div className="checkbox-control">
-              <input type="checkbox" id="time-checkbox-day"/>
-              <label htmlFor="time-checkbox-day">Dienomis</label>
-            </div>
-            
-            <div className="checkbox-control">
-              <input type="checkbox" id="time-checkbox-evening"/>
-              <label htmlFor="time-checkbox-evening">Vakarais</label>
-            </div>
-          </fieldset>
-        </form>
+           </form>
       </div>
     )
     

@@ -1,9 +1,9 @@
-function Banner() {
+function Banner(props) {
     return (
         <a href="#" className="bg-image">
           <span className="text-wrapper">
-            <span className="color-primary">Nežinai ką pasirinkti?</span>
-            <span className="color-black">Spręsk IT testą</span>
+            <span className="color-primary">{props.title}</span>
+            <span className="color-black">{props.action}</span>
           </span>
         </a>
     )

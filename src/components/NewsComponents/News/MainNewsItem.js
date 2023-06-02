@@ -8,7 +8,7 @@ function MainNewsItem (props) {
             <div className="info-wrapper">
                 <span className="article-category">{props.category}</span>
                 <h2 className="article-title">{props.title}</h2>
-                <span className="article-date">2023-01-27</span>
+                <span className="article-date">{props.date}</span>
             </div>
         </a>
         </article>

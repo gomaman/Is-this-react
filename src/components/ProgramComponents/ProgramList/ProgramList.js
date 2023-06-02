@@ -1,4 +1,4 @@
-import ProgramItem from "../ProgramItem/ProgramItem"
+import ProgramItem from "./ProgramItem"
 
 function ProgramList() {
     return (

@@ -8,7 +8,11 @@ function Programs() {
     return (
         <div className="container">
         <h1>Programos</h1>
-        <Banner></Banner>
+        <Banner
+        title="Nežinai ką pasirinkti?"
+        action="Spręsk IT testą"
+        ></Banner>
+
         <div className="content-wrapper">
         <ProgramFilter></ProgramFilter>
         <ProgramList></ProgramList>
