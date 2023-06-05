@@ -7,6 +7,43 @@ import NavigationItem from "./NavigationItem"
 
 
 export function NavigationGenerator() {
+
+    const NAV_ITEMS = [
+        {
+            href: "/student",
+            text: "Studentams"
+        },
+
+        {
+            href: "/programs",
+            text: "Programos"
+        },
+
+        {
+            href: "/career",
+            text: "Karjeros Centras"
+        },
+
+        {
+            href: "/it-test",
+            text: "IT testas"
+        },
+
+        {
+            href: "/about-us",
+            text: "About Us"
+        },
+
+        {
+            href: "/contact-us",
+            text: "Contact Us"
+        },
+
+        {
+            href: "/news",
+            text: "News"
+        },
+    ]
     return (
         <header className="header">
             <nav className="navigation">
@@ -15,42 +52,14 @@ export function NavigationGenerator() {
                     href='/'
                     className="nav-logo"
                 ></NavigationLogo>
-
                 <ul>
-                    <NavigationItem
-                        href="/student"
-                        text="Studentams"
-                    ></NavigationItem>
-
-                    <NavigationItem
-                        href="/programs"
-                        text="Programos"
-                    ></NavigationItem>
-
-                    <NavigationItem
-                        href="/career"
-                        text="Karjeros Centras"
-                    ></NavigationItem>
-
-                    <NavigationItem
-                        href="/it-test"
-                        text="IT testas"
-                    ></NavigationItem>
-
-                    <NavigationItem
-                        href="/about-us"
-                        text="About Us"
-                    ></NavigationItem>
-
-                    <NavigationItem
-                        href="/contact-us"
-                        text="Contact Us"
-                    ></NavigationItem>
-
-                    <NavigationItem
-                        href="/news"
-                        text="News"
-                    ></NavigationItem>
+                    {NAV_ITEMS.map(({ href, text }, index) => (
+                        <NavigationItem
+                            key={index}
+                            href={href}
+                            text={text}
+                        ></NavigationItem>
+                    ))}
 
                     <li>
                         <SmallButton
@@ -58,6 +67,7 @@ export function NavigationGenerator() {
                             href="+3700012345"
                         ></SmallButton>
                     </li>
+
                 </ul>
             </nav>
         </header>

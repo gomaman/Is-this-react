@@ -1,7 +1,6 @@
 import ProgramItem from "./ProgramItem"
 
 function ProgramList() {
-
     const PROGRAM_ITEMS_DATA = [
         {
             promo: "Naujas",
