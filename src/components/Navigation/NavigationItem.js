@@ -1,5 +1,5 @@
 function NavigationItem(props) {
-    const {text, href} = props
+    const {text, href} = props.item
     if(text, href) {
         return (
             <li>

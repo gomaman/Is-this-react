@@ -95,3 +95,41 @@ export const PROGRAM_FILTER_DATA = [
       address:"Ulonų g. 31, LT-62161, Alytaus m. sav."
     },
   ]
+
+
+export const NAV_ITEMS = [
+    {
+        href: "/student",
+        text: "Studentams"
+    },
+
+    {
+        href: "/programs",
+        text: "Programos"
+    },
+
+    {
+        href: "/career",
+        text: "Karjeros Centras"
+    },
+
+    {
+        href: "/it-test",
+        text: "IT testas"
+    },
+
+    {
+        href: "/about-us",
+        text: "About Us"
+    },
+
+    {
+        href: "/contact-us",
+        text: "Contact Us"
+    },
+
+    {
+        href: "/news",
+        text: "News"
+    },
+]
