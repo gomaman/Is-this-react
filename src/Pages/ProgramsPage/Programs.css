@@ -38,17 +38,15 @@
     color: #ff00e9;
   }
   
-  .container {
+  /* .container {
     max-width: 1170px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 20px;
     padding-left: 20px;
-  }
+  } */
   
-  .content-wrapper {
-    margin-top: 50px;
-  }
+
   
   .program-filter-form {
     background-color: white;
@@ -79,10 +77,11 @@
     gap: 30px;
   }
   
-  .content-wrapper {
+  .programs-content-wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 30px;
+    margin-top: 50px;
   }
   
   .program-item {
@@ -136,7 +135,7 @@
       background-position-y: 100%;
     }
   
-    .content-wrapper {
+    .program-content-wrapper {
       grid-template-columns: 2fr 3fr;
     }
   

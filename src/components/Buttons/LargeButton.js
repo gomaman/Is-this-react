@@ -1,3 +1,5 @@
+import './LargeButton.css'
+
 function LargeButton (props) {
     let {text, href} = props
     return (

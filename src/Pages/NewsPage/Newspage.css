@@ -7,42 +7,8 @@
     background-color: #f2f2f2;
     margin-bottom: 500px;
   }
-  
-  .container {
-    max-width: 1170px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 20px;
-    padding-left: 20px;
-  }
-  
-  .large-button {
-    text-decoration: none;
-    background-color: white;
-    display: block;
-    color: black;
-    font-size: 35px;
-    padding: 30px;
-    border-radius: 8px;
-  }
-  
-  .large-button.arrow {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .large-button.arrow::after {
-    content: url(../../images/arrow.svg);
-  }
-  
-  .large-button.arrow path {
-    transition: fill 0.5s;
-  }
-  
-  .large-button.arrow:hover path {
-    fill: #1200ff;
-  }
+    
+
   
   .section-title {
     font-size: 35px;
@@ -58,7 +24,7 @@
     object-fit: cover;
   }
   
-  .content-wrapper {
+  .news-content-wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 30px;
@@ -183,8 +149,6 @@
     margin-bottom: 5px;
   }
   
-  
-  
   .podcast-item-grid {
     background-color: black;
     display: grid;
@@ -283,7 +247,7 @@
   }
   
   @media (max-width: 1000px) {
-    .content-wrapper {
+    .event-content-wrapper {
       grid-template-columns: 3fr 2fr;
     }
   
@@ -297,7 +261,7 @@
   }
   
   @media (max-width: 800px) {
-    .content-wrapper {
+    .event-content-wrapper {
       grid-template-columns: 1fr;
     }
   

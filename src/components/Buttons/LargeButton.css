@@ -1,0 +1,27 @@
+.large-button {
+    text-decoration: none;
+    background-color: white;
+    display: block;
+    color: black;
+    font-size: 35px;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  
+  .large-button.arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* .large-button.arrow:hover:after {
+    content: url(../../images/arrow.svg);
+  } */
+  
+  .large-button.arrow path {
+    transition: fill 0.5s;
+  }
+  
+  .large-button.arrow:hover path {
+    fill: #1200ff;
+  }

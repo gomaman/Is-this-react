@@ -1,18 +1,18 @@
 import './Contact.css';
+import Container from '../../components/Containers/Container';
 import Shops from '../../components/ShopComponents/ShopList/ShopList';
 import Maps  from '../../components/ShopComponents/ShopMap/ShopMap';
 
-function Contact() {
+function Contact(props) {
+    console.log(props)
     return (
         <div className="Contact">
-            <div className="container">
-                <div className="container">
+            <Container className='container'>
                     <div className="content">
                         <Shops/>
                         <Maps/>
                     </div>
-                </div>
-            </div>
+            </Container>
         </div>
     );
 }
