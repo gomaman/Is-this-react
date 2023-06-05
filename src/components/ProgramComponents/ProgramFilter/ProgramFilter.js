@@ -1,49 +1,21 @@
+
 import ProgramFilterFieldSet from "./ProgramFilterFieldSet"
 import ProgramFormControlItem from "./ProgramFormControl"
+import { PROGRAM_FILTER_DATA, PROGRAM_ITEMS_DATA } from "../../Config/Config"
+
+const ProgramLength = PROGRAM_ITEMS_DATA.length
 
 function ProgramFilter () {
-  const PROGRAM_ITEMS_DATA = [
-    {
-      theme:"Tema",
-      option1:"Visos",
-      option2:"Programavimas",
-      option3:"Dizainas"
-    },
-
-    {
-      theme:"Vieta",
-      option1:"Visos",
-      option2:"Vilnius",
-      option3:"Kaunas"
-    },
-
-    {
-      theme:"Tipas",
-      option1:"Visos",
-      option2:"Programavimas",
-      option3:"Dizainas"
-    },
-    
-  ]
-
-  let counter = 0 
-
     return (
       <div className="programs-filter">
         <form className="program-filter-form">
-          {PROGRAM_ITEMS_DATA.map((program, index) => {
-            counter = counter + 1
-          })}
 
-          <span className="programs-found">Rastos {counter} programos</span>
+        <span className="programs-found">Rastos {ProgramLength} programos</span>
 
-        {PROGRAM_ITEMS_DATA.map(({theme, option1, option2, option3}, index) => (
+        {PROGRAM_FILTER_DATA.map((item, index) => (
           <ProgramFormControlItem
           key={index}
-          theme={theme}
-          option1={option1}
-          option2={option2}
-          option3={option3}
+          data={item}
           ></ProgramFormControlItem>
         ))}
 

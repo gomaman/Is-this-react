@@ -8,6 +8,4 @@ function NavigationItem(props) {
         )
     }
 }
-
-
 export default NavigationItem

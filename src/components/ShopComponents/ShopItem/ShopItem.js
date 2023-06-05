@@ -1,21 +1,13 @@
 function ShopItem(props) {
-  if (props.title) {
+  const {title, phone, email, address} = props.data
+  if (title) {
     return (
       <div className="shop-item">
-        <h2 className="shop-title">{props.title}</h2>
+        <h2 className="shop-title">{title}</h2>
         <ul className="shop-address-list">
-
-          {props.phone && (
-            <li>Phone: <a href={`tel:${props.phone}`}>{props.phone}</a></li>
-          )}
-          {props.email && (
-            <li>Email: <a href={`mailto:${props.email}`}>{props.email}</a></li>
-          )
-          }
-          {props.address && (
-            <li>Address: <a href="/#" target="_blank">{props.address}</a></li>
-          )
-          }
+          {phone && (<li>Phone: <a href={`tel:${phone}`}>{phone}</a></li>)}
+          {email && (<li>Email: <a href={`mailto:${email}`}>{email}</a></li>)}
+          {address && (<li>Address: <a href="/#" target="_blank">{address}</a></li>)}
         </ul>
       </div>
     )

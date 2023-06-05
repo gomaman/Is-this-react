@@ -1,4 +1,3 @@
-import arrow from '../../../images/arrow.svg'
 import MainNewsItem from './MainNewsItem'
 import SideNewsItem from './SideNewsItem'
 import LargeButton from "../../Buttons/LargeButton"
@@ -19,7 +18,6 @@ function News() {
             title: "Įmonių kova dėl IT specialistų: kaip sėkmingai atrasti savo talentus?",
             date: "2023-02-21"
         },
-
     ]
 
     const SIDE_NEWS_ITEM = [
