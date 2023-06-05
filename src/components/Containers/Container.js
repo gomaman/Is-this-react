@@ -7,7 +7,6 @@ function Container(props) {
             {props.children}
         </div>
     )
-
 }
 
 

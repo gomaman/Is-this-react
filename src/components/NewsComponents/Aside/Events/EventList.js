@@ -38,7 +38,7 @@ function EventList() {
             <div className="events-list">
                 {EVENT_ITEMS.map(({ src, eventDay, eventMonth, location, title }, index) => (
                     <EventItem
-                        index = {index}
+                        key = {index}
                         src={src}
                         eventDay={eventDay}
                         eventMonth={eventMonth}
