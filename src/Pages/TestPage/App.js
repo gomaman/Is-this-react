@@ -4,6 +4,7 @@ import Programs from '../ProgramsPage/Programs'
 import NewsPage from '../../Pages/NewsPage/Newspage'
 import ErrorPage from '../ErrorPage/ErrorPage';
 import HomePage from '../HomePage/HomePage';
+import Counter from '../Counter/Counter';
 import NavigationGenerator from '../../components/Navigation/Navigation';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <Routes>
       <Route path='/' element={<HomePage/>}/>
       <Route path='/contact-us' element={<Contact/>}/>
+      <Route path='/counter' element={<Counter />}/>
       <Route path='/programs' element={<Programs/>}/>
       <Route path='/news' element={<NewsPage/>}/>
       <Route path='*' element={<ErrorPage/>}/>

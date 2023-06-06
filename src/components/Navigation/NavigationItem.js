@@ -1,9 +1,11 @@
+import { NavLink } from 'react-router-dom'
+
 function NavigationItem(props) {
     const {text, href} = props.item
     if(text, href) {
         return (
             <li>
-                 <a href={href}>{text}</a>
+                 <NavLink to={href}>{text}</NavLink>
             </li>
         )
     }
