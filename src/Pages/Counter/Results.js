@@ -1,11 +1,10 @@
 import Counter from "./Counter"
 
-function Results () {
+function Results (props) {
+    console.log(props)
     return (
         <ul>
-            <li>
-                <span></span>
-            </li>
+            <li>{props.result}</li>
         </ul>
     )
 }

@@ -132,6 +132,11 @@ export const NAV_ITEMS = [
         href: "/news",
         text: "News"
     },
+
+    {
+        href: "/shop",
+        text: "Shop"
+    },
 ]
 
 
