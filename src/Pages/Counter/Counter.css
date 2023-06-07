@@ -15,7 +15,7 @@ h3 {
 
 
 
-button, input {
+button, input.number {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   letter-spacing: 2px;

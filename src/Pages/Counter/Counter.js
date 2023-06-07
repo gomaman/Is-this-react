@@ -41,7 +41,7 @@ function Counter() {
                 <button onClick={minus2Handler} disabled={count <= 1}>-2</button>
                 <button onClick={minus1Handler} disabled={count <= 1}>-1</button>
 
-                <input defaultValue={count} type='number' max="10" min="1" onChange={changeHandler} />
+                <input className="number" defaultValue={count} type='number' max="10" min="1" onChange={changeHandler} />
 
                 <button onClick={plus1Handler} disabled={count >= 10}>+1</button>
                 <button onClick={plus2Handler} disabled={count >= 9}>+2</button>
