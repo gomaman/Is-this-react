@@ -8,7 +8,7 @@ const shoppingList = [
     {
         title: "milk",
         picture: "https://i5.walmartimages.com/asr/3592de4c-2d2d-4285-afbf-f0508775bd58_2.bb23225176016b4d5ce96c4efed80382.jpeg",
-        done: true
+        done: false
     },
 
     {
@@ -70,6 +70,10 @@ function ProductsList() {
         setProduct(updatedProducts)
     }
 
+    const changeEdit = (index) => {
+        console.log('e')
+    }
+
     return (
         <Container>
 
@@ -88,6 +92,7 @@ function ProductsList() {
                         done={product.done}
                         key={index}
                         onToggleDone={() => changeStatusDone(index)}
+                        onEdit={() => changeEdit(index)}
                     ></ProductItem>
                 ))}
             </ul>

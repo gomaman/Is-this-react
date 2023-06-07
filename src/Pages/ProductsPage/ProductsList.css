@@ -1,3 +1,9 @@
 ul.card-items {
     list-style: none;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}

@@ -1,10 +1,14 @@
 import './ProductItem.css'
 
 
-function ProductItem({ title, picture, done, onToggleDone }) {
+function ProductItem({ title, picture, done, onToggleDone, onEdit }) {
 
     const handleClick = () => {
         onToggleDone();
+    }
+
+    const handleEdit = () => {
+        onEdit();
     }
 
     return (
@@ -12,7 +16,12 @@ function ProductItem({ title, picture, done, onToggleDone }) {
             <div className={done ? 'card-added' : 'card'}>
                 <h2 className='product-title'>{title}</h2>
                 <img className="product-picture" src={picture} alt={title}></img>
-                <p><button onClick={handleClick}>{done ? 'Remove' : "Add to Cart"}  </button></p>
+                <div className='button-container'>
+                <p><button onClick={handleClick}>{done ? 'Del' : "Add"}  </button></p>
+                <p><button onClick={handleEdit}>Edit</button></p>
+                </div>
+                
+
             </div>
         </li>
     )
