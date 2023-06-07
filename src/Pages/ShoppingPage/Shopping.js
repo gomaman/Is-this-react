@@ -40,6 +40,11 @@ const shoppingList = [
         done: false
     },
 
+    {
+        title: "coffee",
+        done: false
+    },
+
 ];
 
 
@@ -56,20 +61,15 @@ function ShoppingList() {
     return (
         <Container>
             {productTitle}  
-
             <div className='card-items'>
-                {products.map((product, index) => (
-                    
+                {products.map((product, index) => (      
                     <ProductItem
                     title={product.title}
                     key={index}
                     ></ProductItem>
-                   
                 ))}
 
             </div>
-
-
         </Container>
     )
 

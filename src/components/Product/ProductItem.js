@@ -7,8 +7,6 @@ function ProductItem(props) {
                 <p><button>Add to Cart</button></p>
         </div>
     )
-
-
 }
 
 
