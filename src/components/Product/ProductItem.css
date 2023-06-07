@@ -1,3 +1,24 @@
+.card-added {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color: rgba(22, 134, 28, 0.267);
+}
+
+.card-added button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: rgb(255, 255, 255);
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -32,8 +53,8 @@
   }
 
   .product-picture {
-    width:200px;
-    height:200px;
+    width:100px;
+    height:100px;
     object-fit:contain;
   }
 

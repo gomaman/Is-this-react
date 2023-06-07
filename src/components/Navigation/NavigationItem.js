@@ -4,7 +4,7 @@ function NavigationItem(props) {
     const {text, href} = props.item
     if(text, href) {
         return (
-            <li>
+            <li className='nav-item'>
                  <NavLink to={href}>{text}</NavLink>
             </li>
         )

@@ -1,4 +1,4 @@
-import '../Counter/Counter.css'
+import './ProductsList.css'
 import { useState } from "react"
 import Container from "../../components/Containers/Container"
 import ProductItem from '../../components/Product/ProductItem';
@@ -8,7 +8,7 @@ const shoppingList = [
     {
         title: "milk",
         picture: "https://i5.walmartimages.com/asr/3592de4c-2d2d-4285-afbf-f0508775bd58_2.bb23225176016b4d5ce96c4efed80382.jpeg",
-        done: false
+        done: true
     },
 
     {
@@ -51,18 +51,23 @@ function ProductsList() {
 
     const addNewProduct = (event) => {
         event.preventDefault()
-
         const newProductName = event.target.elements['newProduct'].value
 
-        if(newProductName) {
+        if (newProductName) {
             const newProductObj = {
                 title: newProductName,
-                picture: "",
-                done:false
+                picture: "https://media.istockphoto.com/id/1254636082/vector/supermarket-storefront-with-fruits-vegetables-dairy-products-local-grocery-store-vector-icon.jpg?s=1024x1024&w=is&k=20&c=zZhhHnXxbsdZjLw4b0uUnt-vL7VHz_6Mgp-bsbjRQZU=",
+                done: false
             }
             setProduct([...products, newProductObj])
             event.target.reset()
         }
+    }
+
+    const changeStatusDone = (index) => {
+        const updatedProducts = [...products]
+        updatedProducts[index].done = !updatedProducts[index].done
+        setProduct(updatedProducts)
     }
 
     return (
@@ -73,18 +78,19 @@ function ProductsList() {
                 <input type="submit" value="submit"></input>
             </form>
 
-            {productsStatus}  
-            <div className='card-items'>
-                {products.map((product, index) => (      
+            {productsStatus}
+
+            <ul className='card-items'>
+                {products.map((product, index) => (
                     <ProductItem
-                    title={product.title}
-                    src={product.picture}
-                    key={index}
+                        title={product.title}
+                        picture={product.picture}
+                        done={product.done}
+                        key={index}
+                        onToggleDone={() => changeStatusDone(index)}
                     ></ProductItem>
                 ))}
-            </div>
-
-
+            </ul>
 
         </Container>
     )

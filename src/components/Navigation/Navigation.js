@@ -24,7 +24,7 @@ export function NavigationGenerator() {
                         ></NavigationItem>
                     ))}
 
-                    <li>
+                    <li className="nav-item">
                         <SmallButton
                             text="Skambinti"
                             href="+3700012345"
