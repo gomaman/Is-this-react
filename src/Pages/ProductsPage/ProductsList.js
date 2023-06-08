@@ -4,7 +4,6 @@ import Container from "../../components/Containers/Container"
 import ProductItem from '../../components/Product/ProductItem';
 
 const shoppingList = [
-
     {
         title: "milk",
         picture: "https://i5.walmartimages.com/asr/3592de4c-2d2d-4285-afbf-f0508775bd58_2.bb23225176016b4d5ce96c4efed80382.jpeg",
@@ -42,7 +41,6 @@ const shoppingList = [
     },
 ];
 
-
 function ProductsList() {
 
     const [products, setProduct] = useState(shoppingList)
@@ -51,6 +49,7 @@ function ProductsList() {
 
     const addNewProduct = (event) => {
         event.preventDefault()
+
         const newProductName = event.target.elements['newProduct'].value
 
         if (newProductName) {
@@ -60,6 +59,7 @@ function ProductsList() {
                 done: false
             }
             setProduct([...products, newProductObj])
+
             event.target.reset()
         }
     }
@@ -78,8 +78,8 @@ function ProductsList() {
         <Container>
 
             <form onSubmit={addNewProduct}>
-                <input type="text" name="newProduct" placeholder='Add a product'></input>
-                <input type="submit" value="submit"></input>
+                <input className='product-input' type="text" name="newProduct" placeholder='Add a product'></input>
+                <input className='product-input' type="submit" value="submit"></input>
             </form>
 
             {productsStatus}

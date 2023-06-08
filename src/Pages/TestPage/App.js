@@ -6,6 +6,7 @@ import ErrorPage from '../ErrorPage/ErrorPage';
 import HomePage from '../HomePage/HomePage';
 import Counter from '../Counter/Counter';
 import ProductsList from '../ProductsPage/ProductsList';
+import CitiesPage from '../CitiesPage/CitiesPage';
 import NavigationGenerator from '../../components/Navigation/Navigation';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
 
     <Routes>
       <Route path='/' element={<HomePage/>}/>
+      <Route path='/miestai' element={<CitiesPage/>}/>
       <Route path='/shop' element={<ProductsList/>}/>
       <Route path='/contact-us' element={<Contact/>}/>
       <Route path='/counter' element={<Counter />}/>

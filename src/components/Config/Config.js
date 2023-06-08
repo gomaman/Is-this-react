@@ -99,8 +99,8 @@ export const PROGRAM_FILTER_DATA = [
 
 export const NAV_ITEMS = [
     {
-        href: "/student",
-        text: "Studentams"
+        href: "/miestai",
+        text: "Miestai"
     },
 
     {

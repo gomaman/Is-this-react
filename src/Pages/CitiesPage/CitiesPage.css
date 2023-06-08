@@ -1,0 +1,112 @@
+.city-container {
+    width:300px;
+    border: solid black 5px;
+    background-color: rgba(95, 158, 160, 0.651);
+    margin:20px;
+    padding:10px
+}
+
+.city-name {
+    font-size: 20px;
+}
+
+.city-attractions {
+    font-size:18px;
+}
+
+.cities-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+
+.last-city {
+    background-color: rgba(179, 72, 72, 0.37);
+}
+
+
+.last-odd {
+    grid-column: span 2;
+    width: 100%;
+}
+
+.cities-container {
+    max-width: 1270px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.city-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: stretch;
+}
+
+label {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    max-width: 1270px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.city-form input {
+    margin: 5px 0px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.capital-checkbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.city-form input[type="checkbox"] {
+    width: 30px;
+    height: 20px;
+  }
+.city-input-area textarea  {
+    margin: 5px 0px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    resize: none;
+    width: 100%;
+}
