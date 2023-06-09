@@ -8,9 +8,12 @@ function CitiesPage() {
 
     const [cities, setCities] = useState(citiesData)
 
+
     const addCity = (newCityItem) => {
         setCities([newCityItem, ...cities]);
       };
+
+
 
     const removeCity = (cityName) => {
         const cityIndex = cities.findIndex((city) => city.name === cityName);
@@ -24,7 +27,9 @@ function CitiesPage() {
     const isOddLength = cities.length % 2 === 1
     return (
         <section>
-            <CitiesForm addCity={addCity} />
+            <CitiesForm 
+            addCity={addCity}
+            />
             <div className='cities-container'>
                 {cities.map((city, index) => (
                     <CityItem

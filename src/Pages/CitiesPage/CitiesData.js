@@ -79,16 +79,16 @@ export const citiesData = [
         touristAttractions: ['Melbourne Skydeck'],
         isCapital: false,
     },
-  //   {
-  //       name: 'Sapporo',
-  //       population: 1900000,
-  //       location: {
-  //           continent: 'Asia',
-  //           country: 'Japan',
-  //       },
-  //       touristAttractions: ['Hokkaido Jingu'],
-  //       isCapital: false,
-  //   },
+    {
+        name: 'Sapporo',
+        population: 1900000,
+        location: {
+            continent: 'Asia',
+            country: 'Japan',
+        },
+        touristAttractions: ['Hokkaido Jingu'],
+        isCapital: false,
+    },
     {
         name: 'Miami',
         population: 400000,

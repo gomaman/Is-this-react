@@ -116,5 +116,37 @@ section {
 }
 
 .remove-item {
-    background-color: rgb(255, 0, 0);
+    background-color: rgba(255, 0, 0, 0.5);
+    color:white;
+    border:3px solid rgb(0, 0, 0)
 }
+
+.radio-input-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.city-radio-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.city-radio-input label{
+    font-size: 20px;
+}
+
+
+.edit-item {
+    background-color: rgba(172, 255, 47, 0.5);
+    margin-left:5px;
+    color:white;
+    border:3px solid rgb(0, 0, 0);
+}
+
+.textInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+    outline: none;
+  }
