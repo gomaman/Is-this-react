@@ -1,5 +1,5 @@
 .city-container {
-    width:300px;
+    width:calc(100% - 15px);
     border: solid black 5px;
     background-color: rgba(95, 158, 160, 0.651);
     margin:20px;
@@ -27,7 +27,7 @@
 
 .last-odd {
     grid-column: span 2;
-    width: 100%;
+    width: calc(100% - 15px);
 }
 
 .cities-container {
@@ -109,4 +109,12 @@ section {
     touch-action: manipulation;
     resize: none;
     width: 100%;
+}
+
+.city-input input {
+    width:100%;
+}
+
+.remove-item {
+    background-color: rgb(255, 0, 0);
 }

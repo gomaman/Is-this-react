@@ -1,7 +1,4 @@
-import { citiesData } from "./CitiesData";
-
-function CityItem({ name, population, continent, country, touristAttractions, isCapital, isLastInOdd}) {
-
+function CityItem({ name, population, continent, country, touristAttractions, isCapital, isLastInOdd, removeCity}) {
 
     function cityWrapper(text, text2) {
         return (
@@ -16,6 +13,10 @@ function CityItem({ name, population, continent, country, touristAttractions, is
         )
     }
 
+    const handleRemove = () => {
+        removeCity(name);
+    };
+
     const checkAttractions = () => {
         if(touristAttractions.length >= 2) {
             return (cityWrapper("attractions", "is"))
@@ -26,6 +27,7 @@ function CityItem({ name, population, continent, country, touristAttractions, is
 
     return (
         <div className={`city-container ${isCapital ? 'capital' : ''} ${isLastInOdd ? 'last-odd' : ''}`}>
+            <button className="remove-item" onClick={handleRemove}></button>
             <h2 className="city-name">{name} {isCapital && "(Capital)"}</h2>
             <p className="city-description">{name} city is located in {continent}, {country} has a population of {population} people.
                 {isCapital && <span> {name} is the capital of {country}</span>}</p>
