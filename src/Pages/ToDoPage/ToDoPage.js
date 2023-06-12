@@ -33,6 +33,7 @@ function ToDoPage() {
                         id={task.id}
                         title={task.title}
                         key={index}
+                        isDone={task.isDone}
                     ></ToDoItem>
                 ))}
             </ContainerGrid>

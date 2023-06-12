@@ -5,6 +5,7 @@ function ToDoForm({addNewItemHandler}) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [deadline, setDeadline] = useState("");
+  const [isDone, setIsDone] = useState(false)
 
   function SubmitHandler(event) {
     event.preventDefault();
@@ -13,6 +14,7 @@ function ToDoForm({addNewItemHandler}) {
       title,
       description,
       deadline,
+      isDone
     };
 
     addNewItemHandler(newToDoItem)
@@ -20,6 +22,7 @@ function ToDoForm({addNewItemHandler}) {
     setTitle("");
     setDescription("");
     setDeadline("");
+    setIsDone(false)
   }
 
   return (
@@ -27,7 +30,7 @@ function ToDoForm({addNewItemHandler}) {
       <h2>To Do Form</h2>
       <div className="todo-container">
         <form className="task-form" onSubmit={SubmitHandler}>
-          <div className="task-checkbox task-input">
+          <div className="task-input">
             <input
               name="title"
               placeholder="Task Name"
@@ -46,7 +49,7 @@ function ToDoForm({addNewItemHandler}) {
             ></textarea>
           </div>
 
-          <div className="task-checkbox task-input">
+          <div className="task-input">
             <input
               name="deadline"
               placeholder="Task Deadline"
@@ -54,6 +57,16 @@ function ToDoForm({addNewItemHandler}) {
               onChange={(event) => setDeadline(event.target.value)}
             ></input>
           </div>
+
+          <div className="task-checkbox">
+            <label htmlFor="isDone">Task Done</label>
+            <input 
+             type="checkbox"
+             name="isDone"
+             checked={isDone}
+             onChange={(event) => setIsDone(event.target.value)}
+             ></input>
+         </div>
 
           <div className="task-button-container">
             <input

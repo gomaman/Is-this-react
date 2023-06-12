@@ -1,7 +1,7 @@
 import "./ToDoItem.css"
 import { v4 as uuid } from 'uuid';
 
-function ToDoItem({deadline, description, doneStatus, title}) {
+function ToDoItem({deadline, description, isDone, title}) {
     const current = new Date();
     const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
     const unique_id = uuid()
@@ -16,7 +16,7 @@ function ToDoItem({deadline, description, doneStatus, title}) {
                     <li>Description: {description}</li>
                     <li>Date Created: {date}</li>
                     <li>Deadline: {deadline}</li>
-                    <li>Status: {doneStatus ? "Done" : "Not done"}</li>
+                    <li>Status: {isDone ? "Done" : "Not done"}</li>
                 </ul>
             </div>
         </div>
