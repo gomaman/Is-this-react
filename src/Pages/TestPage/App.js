@@ -7,6 +7,7 @@ import HomePage from '../HomePage/HomePage';
 import Counter from '../Counter/Counter';
 import ProductsList from '../ProductsPage/ProductsList';
 import CitiesPage from '../CitiesPage/CitiesPage';
+import ToDoPage from '../ToDoPage/ToDoPage';
 import NavigationGenerator from '../../components/Navigation/Navigation';
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
       <Route path='/shop' element={<ProductsList/>}/>
       <Route path='/contact-us' element={<Contact/>}/>
       <Route path='/counter' element={<Counter />}/>
-      <Route path='/programs' element={<Programs/>}/>
+      <Route path='/todo' element={<ToDoPage/>}/>
       <Route path='/news' element={<NewsPage/>}/>
       <Route path='*' element={<ErrorPage/>}/>
     </Routes>

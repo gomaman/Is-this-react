@@ -8,6 +8,7 @@ function CitiesForm({ addCity }) {
     const [continent, setContinent] = useState('')
     const [country, setCountry] = useState('')
     const [attractions, setAttractions] = useState('')
+    const [features, setFeatures] = useState('')
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -113,28 +114,28 @@ function CitiesForm({ addCity }) {
 
                 <div>
                     <div>
-                        <input type="checkbox" id="Sightseeing" name="Sightseeing"></input>
-                        <label htmlFor="Sightseeing">Sightseeing:</label>
+                        <input type="checkbox" id="Sightseeing" name="Sightseeing" onChange={(event) => setFeatures(event.target.checked)}></input>
+                        <label htmlFor="Sightseeing">Sightseeing</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="Food Tours:" name="Food Tours:"></input>
-                        <label htmlFor="Food Tours:">Food Tours:</label>
+                        <input type="checkbox" id="Food Tours:" name="Food Tours:" onChange={(event) => setFeatures(event.target.checked)}></input>
+                        <label htmlFor="Food Tours:">Food Tours</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="Cultural Experiences" name="Cultural Experiences"></input>
-                        <label htmlFor="Cultural Experiences">Cultural Experiences:</label>
+                        <input type="checkbox" id="Cultural Experiences" name="Cultural Experiences" onChange={(event) => setFeatures(event.target.checked)}></input>
+                        <label htmlFor="Cultural Experiences">Cultural Experiences</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="Wildlife Safari" name="Wildlife Safari"></input>
-                        <label htmlFor="Wildlife Safari">Wildlife Safari:</label>
+                        <input type="checkbox" id="Wildlife Safari" name="Wildlife Safari" onChange={(event) => setFeatures(event.target.checked)}></input>
+                        <label htmlFor="Wildlife Safari">Wildlife Safari</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" id="Adventure Sports" name="Adventure Sports"></input>
-                        <label htmlFor="Adventure Sports">Adventure Sports:</label>
+                        <input type="checkbox" id="Adventure Sports" name="Adventure Sports" onChange={(event) => setFeatures(event.target.checked)}></input>
+                        <label htmlFor="Adventure Sports">Adventure Sports</label>
                     </div>
                 </div>
                 <div>

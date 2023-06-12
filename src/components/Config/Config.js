@@ -104,8 +104,8 @@ export const NAV_ITEMS = [
     },
 
     {
-        href: "/programs",
-        text: "Programos"
+        href: "/todo",
+        text: "To Do"
     },
 
     {
