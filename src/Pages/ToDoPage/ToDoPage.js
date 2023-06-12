@@ -6,11 +6,12 @@ import ToDoItem from '../../components/ToDoComponents/ToDoItem'
 import { TODO_DATA } from '../../components/ToDoComponents/ToDoData'
 import { useState } from 'react'
 
+
 function ToDoPage() {
 
     const [newTODO_DATA, setToDo] = useState(TODO_DATA)
 
-    const addToDoItem = (newToDoItem) => {
+    const addNewItemHandler = (newToDoItem) => {
         setToDo([newToDoItem, ...newTODO_DATA]);
     };
 
@@ -18,7 +19,7 @@ function ToDoPage() {
         <section>
             <ContainerGrid>
                 <ToDoForm
-                    addToDoItem={addToDoItem}
+                    addNewItemHandler={addNewItemHandler}
                 ></ToDoForm>
             </ContainerGrid>
 

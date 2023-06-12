@@ -1,7 +1,7 @@
 import "./ToDoForm.css";
 import React, { useState } from "react";
 
-function ToDoForm({addToDoItem}) {
+function ToDoForm({addNewItemHandler}) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [deadline, setDeadline] = useState("");
@@ -15,7 +15,7 @@ function ToDoForm({addToDoItem}) {
       deadline,
     };
 
-    addToDoItem(newToDoItem)
+    addNewItemHandler(newToDoItem)
 
     setTitle("");
     setDescription("");
