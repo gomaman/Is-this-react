@@ -1,11 +1,16 @@
 import "./ToDoForm.css";
 import React, { useState } from "react";
+import { v4 as uuid } from 'uuid';
 
 function ToDoForm({addNewItemHandler}) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [deadline, setDeadline] = useState("");
   const [isDone, setIsDone] = useState(false)
+  const current = new Date();
+  const date = `${current.getFullYear()}-${current.getMonth()}-${current.getDate()}`;
+  const unique_id = uuid()
+  const small_id = unique_id.slice(0,5)
 
   function SubmitHandler(event) {
     event.preventDefault();
@@ -13,6 +18,8 @@ function ToDoForm({addNewItemHandler}) {
     const newToDoItem = {
       title,
       description,
+      date,
+      small_id,
       deadline,
       isDone
     };
@@ -23,6 +30,9 @@ function ToDoForm({addNewItemHandler}) {
     setDescription("");
     setDeadline("");
     setIsDone(false)
+
+
+
   }
 
   return (
@@ -52,6 +62,7 @@ function ToDoForm({addNewItemHandler}) {
           <div className="task-input">
             <input
               name="deadline"
+              type="date"
               placeholder="Task Deadline"
               value={deadline}
               onChange={(event) => setDeadline(event.target.value)}

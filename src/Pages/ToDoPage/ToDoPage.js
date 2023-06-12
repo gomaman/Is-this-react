@@ -26,14 +26,16 @@ function ToDoPage() {
             <ContainerGrid>
                 {newTODO_DATA.map((task, index) => (
                     <ToDoItem
+                        title={task.title}
+                        description={task.description}
                         dateCreated={task.dateCreated}
                         deadline={task.deadline}
-                        description={task.description}
                         doneStatus={task.doneStatus}
                         id={task.id}
-                        title={task.title}
                         key={index}
                         isDone={task.isDone}
+                        date={task.date}
+                        small_id={task.small_id}
                     ></ToDoItem>
                 ))}
             </ContainerGrid>
