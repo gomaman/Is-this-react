@@ -19,6 +19,8 @@ function ToDoPage() {
     const changeStatusHandler = (small_id) => {
         const targetItemIndex = newTODO_DATA.findIndex((singleToDo) => singleToDo.small_id === small_id)
 
+        console.log(targetItemIndex)
+
         setToDo(prevState => {
             const newState = [...prevState]
             const clickedToDo = newState[targetItemIndex]
@@ -29,13 +31,21 @@ function ToDoPage() {
 
             return newState
         })
-
-
-        console.log(targetItemIndex)
       }
 
-      
+    const removeItemById = (small_id) => {
+        const targetItemIndex = newTODO_DATA.findIndex((singleToDo) => singleToDo.small_id === small_id)
 
+        setToDo(prevState => {
+            const newState = [...prevState]
+            
+            if (targetItemIndex !== -1) {
+                newState.splice(targetItemIndex, 1);
+              }
+            
+            return newState
+        })
+    }
 
     return (
         <section>
@@ -59,6 +69,7 @@ function ToDoPage() {
                         date={date}
                         small_id={small_id}
                         changeStatusHandler={changeStatusHandler}
+                        removeItemById = {removeItemById}
                     ></ToDoItem>
                 ))}
             </ContainerGrid>

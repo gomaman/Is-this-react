@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./ToDoItem.css"
 
-function ToDoItem({deadline, description, title, small_id, date, newTODO_DATA, changeStatusHandler, done}) {
+function ToDoItem({deadline, description, title, small_id, date, newTODO_DATA, changeStatusHandler, done, removeItemById}) {
 
     const deadlineYear = Number(deadline.split("-")[0])
     const deadlineMonth = Number(deadline.split("-")[1])
@@ -15,11 +15,6 @@ function ToDoItem({deadline, description, title, small_id, date, newTODO_DATA, c
 
     let timeLeft = ""
     
-    function removeItemById() {
-      console.log(small_id)
-      console.log(newTODO_DATA)
-    }
-
 
     if (deadlineYear > currentDateYear) {
         timeLeft = `${deadlineYear - currentDateYear} Year${deadlineYear - currentDateYear > 1 ? 's' : ''}`;
@@ -37,7 +32,7 @@ function ToDoItem({deadline, description, title, small_id, date, newTODO_DATA, c
             <h2>Task: {small_id}</h2>
             <div className="todo-container">
                 <ul className="todo-item-list">
-                    <li><button onClick={() => removeItemById()}className="remove-object-button">Remove Task</button></li>
+                    <li><button onClick={() => removeItemById(small_id)}className="remove-object-button">Remove Task</button></li>
                     <li>Title: {title}</li>
                     <li>Description: {description}</li>
                     <li>Date Created: {date}</li>
