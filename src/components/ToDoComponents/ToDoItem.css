@@ -1,0 +1,9 @@
+.todo-item-list {
+    list-style: none;
+    line-height: 40px;
+}
+
+.remove-object-button {
+    font-size: 10px;
+    letter-spacing: 1px;
+}

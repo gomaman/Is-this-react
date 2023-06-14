@@ -10,10 +10,32 @@ import { useState } from 'react'
 function ToDoPage() {
 
     const [newTODO_DATA, setToDo] = useState(TODO_DATA)
+    
 
     const addNewItemHandler = (newToDoItem) => {
         setToDo([newToDoItem, ...newTODO_DATA]);
     };
+
+    const changeStatusHandler = (small_id) => {
+        const targetItemIndex = newTODO_DATA.findIndex((singleToDo) => singleToDo.small_id === small_id)
+
+        setToDo(prevState => {
+            const newState = [...prevState]
+            const clickedToDo = newState[targetItemIndex]
+            const updatedClickedToDo = {...clickedToDo}
+            updatedClickedToDo.done = !updatedClickedToDo.done
+
+            newState[targetItemIndex] = updatedClickedToDo
+
+            return newState
+        })
+
+
+        console.log(targetItemIndex)
+      }
+
+      
+
 
     return (
         <section>
@@ -24,18 +46,19 @@ function ToDoPage() {
             </ContainerGrid>
 
             <ContainerGrid>
-                {newTODO_DATA.map((task, index) => (
+                {newTODO_DATA.map(({title, description, dateCreated, deadline, id, done, date, small_id}, index) => (
                     <ToDoItem
-                        title={task.title}
-                        description={task.description}
-                        dateCreated={task.dateCreated}
-                        deadline={task.deadline}
-                        doneStatus={task.doneStatus}
-                        id={task.id}
+                        newTODO_DATA={newTODO_DATA}
+                        title={title}
+                        description={description}
+                        dateCreated={dateCreated}
+                        deadline={deadline}
+                        id={id}
                         key={index}
-                        isDone={task.isDone}
-                        date={task.date}
-                        small_id={task.small_id}
+                        done={done}
+                        date={date}
+                        small_id={small_id}
+                        changeStatusHandler={changeStatusHandler}
                     ></ToDoItem>
                 ))}
             </ContainerGrid>

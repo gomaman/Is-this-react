@@ -6,11 +6,11 @@ function ToDoForm({addNewItemHandler}) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [deadline, setDeadline] = useState("");
-  const [isDone, setIsDone] = useState(false)
   const current = new Date();
-  const date = `${current.getFullYear()}-${current.getMonth()}-${current.getDate()}`;
+  const date = `${current.getFullYear()}-${current.getMonth()}-${current.getDate()} ${current.getHours()}:${current.getMinutes()}`;
   const unique_id = uuid()
   const small_id = unique_id.slice(0,5)
+  const done = false
 
   function SubmitHandler(event) {
     event.preventDefault();
@@ -21,7 +21,7 @@ function ToDoForm({addNewItemHandler}) {
       date,
       small_id,
       deadline,
-      isDone
+      done,
     };
 
     addNewItemHandler(newToDoItem)
@@ -29,11 +29,9 @@ function ToDoForm({addNewItemHandler}) {
     setTitle("");
     setDescription("");
     setDeadline("");
-    setIsDone(false)
-
-
-
+    // setIsDone(false)
   }
+
 
   return (
     <div className="todo-task-container">
@@ -69,15 +67,6 @@ function ToDoForm({addNewItemHandler}) {
             ></input>
           </div>
 
-          <div className="task-checkbox">
-            <label htmlFor="isDone">Task Done</label>
-            <input 
-             type="checkbox"
-             name="isDone"
-             checked={isDone}
-             onChange={(event) => setIsDone(event.target.value)}
-             ></input>
-         </div>
 
           <div className="task-button-container">
             <input
