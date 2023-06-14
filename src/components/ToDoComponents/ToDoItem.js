@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./ToDoItem.css"
 
-function ToDoItem({deadline, description, title, small_id, date, newTODO_DATA, changeStatusHandler, done, removeItemById}) {
+function ToDoItem({editDate, deadline, description, title, small_id, date, newTODO_DATA, changeStatusHandler, done, removeItemById, editItemById}) {
 
     const deadlineYear = Number(deadline.split("-")[0])
     const deadlineMonth = Number(deadline.split("-")[1])
@@ -33,12 +33,14 @@ function ToDoItem({deadline, description, title, small_id, date, newTODO_DATA, c
             <div className="todo-container">
                 <ul className="todo-item-list">
                     <li><button onClick={() => removeItemById(small_id)}className="remove-object-button">Remove Task</button></li>
+                    <li><button onClick={() => editItemById(small_id)}className="remove-object-button">Edit Task</button></li>
                     <li>Title: {title}</li>
-                    <li>Description: {description}</li>
-                    <li>Date Created: {date}</li>
-                    <li>Deadline: {deadline}</li>
                     <li>Status: {done ? "Done" : "Not done"}  <input onChange={() => changeStatusHandler(small_id)} type="checkbox" checked={done} ></input></li>
+                    <li>Description: {description}</li>
+                    <li>Created: {date}</li>
+                    <li>Deadline: {deadline}</li>
                     <li>Time Left: {timeLeft} </li>
+                    <li> {editDate ? `Edited: ${editDate} ` : ''} </li>
                 </ul>
             </div>
         </div>
@@ -49,4 +51,3 @@ function ToDoItem({deadline, description, title, small_id, date, newTODO_DATA, c
 
 export default ToDoItem
 
-// 

@@ -1,13 +1,15 @@
 import "./ToDoForm.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { v4 as uuid } from 'uuid';
 
-function ToDoForm({addNewItemHandler}) {
+function ToDoForm({addNewItemHandler, editData}) {
+
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [deadline, setDeadline] = useState("");
   const current = new Date();
   const date = `${current.getFullYear()}-${current.getMonth()}-${current.getDate()} ${current.getHours()}:${current.getMinutes()}`;
+  const editDate = `${current.getFullYear()}-${current.getMonth()}-${current.getDate()} ${current.getHours()}:${current.getMinutes()}`;
   const unique_id = uuid()
   const small_id = unique_id.slice(0,5)
   const done = false
@@ -15,14 +17,29 @@ function ToDoForm({addNewItemHandler}) {
   function SubmitHandler(event) {
     event.preventDefault();
 
-    const newToDoItem = {
-      title,
-      description,
-      date,
-      small_id,
-      deadline,
-      done,
-    };
+    let newToDoItem = {}
+
+    if(editData) {
+      newToDoItem = {
+        title,
+        description,
+        date: editData.date,
+        small_id: editData.small_id,
+        deadline,
+        done: editData.done,
+        editDate
+      };
+    }else {
+      newToDoItem = {
+        title,
+        description,
+        date,
+        small_id,
+        deadline,
+        done,
+      };
+    }
+
 
     addNewItemHandler(newToDoItem)
 
@@ -32,6 +49,15 @@ function ToDoForm({addNewItemHandler}) {
     // setIsDone(false)
   }
 
+  useEffect(() => {
+    if(editData) {
+      setTitle(editData.title)
+      setDescription(editData.description)
+      setDeadline(editData.deadline)
+  } else {
+
+  }
+  }, [editData])
 
   return (
     <div className="todo-task-container">
@@ -69,11 +95,11 @@ function ToDoForm({addNewItemHandler}) {
 
 
           <div className="task-button-container">
-            <input
+            <button
               type="submit"
               value="Add a task"
               className="task-button"
-            ></input>
+            > {editData ? 'Save Task' : 'New task'} </button>
           </div>
         </form>
       </div>

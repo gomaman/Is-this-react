@@ -10,16 +10,27 @@ import { useState } from 'react'
 function ToDoPage() {
 
     const [newTODO_DATA, setToDo] = useState(TODO_DATA)
+    const [editToDo, setEditToDo] = useState(null)
     
 
-    const addNewItemHandler = (newToDoItem) => {
-        setToDo([newToDoItem, ...newTODO_DATA]);
+    const addNewItemHandler = (toDo) => {
+        if(editToDo) {
+            const targetItemIndex = newTODO_DATA.findIndex((item) => item.small_id === editToDo.small_id);
+            if (targetItemIndex !== -1) {
+              setToDo((prevState) => {
+                const newState = [...prevState];
+                newState[targetItemIndex] = { ...newState[targetItemIndex], ...toDo };
+                return newState;
+              });
+            }
+            setEditToDo(null);
+        } else {
+            setToDo([toDo, ...newTODO_DATA]);
+        }
     };
 
     const changeStatusHandler = (small_id) => {
         const targetItemIndex = newTODO_DATA.findIndex((singleToDo) => singleToDo.small_id === small_id)
-
-        console.log(targetItemIndex)
 
         setToDo(prevState => {
             const newState = [...prevState]
@@ -47,16 +58,22 @@ function ToDoPage() {
         })
     }
 
+    const editItemById = (small_id) => {
+        const targetItem = newTODO_DATA.find((singleToDo) => singleToDo.small_id === small_id)
+        setEditToDo(targetItem)
+    }
+
     return (
         <section>
             <ContainerGrid>
                 <ToDoForm
+                    editData={editToDo}
                     addNewItemHandler={addNewItemHandler}
                 ></ToDoForm>
             </ContainerGrid>
 
             <ContainerGrid>
-                {newTODO_DATA.map(({title, description, dateCreated, deadline, id, done, date, small_id}, index) => (
+                {newTODO_DATA.map(({title, description, dateCreated, deadline, id, done, date, small_id, editDate}, index) => (
                     <ToDoItem
                         newTODO_DATA={newTODO_DATA}
                         title={title}
@@ -70,6 +87,8 @@ function ToDoPage() {
                         small_id={small_id}
                         changeStatusHandler={changeStatusHandler}
                         removeItemById = {removeItemById}
+                        editItemById = {editItemById}
+                        editDate = {editDate}
                     ></ToDoItem>
                 ))}
             </ContainerGrid>
