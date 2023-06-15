@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router';
 import Contact from '../ContactUsPage/Contact'
+import DogAPI from '../API/DogAPIPage/DogAPI'
 import Programs from '../ProgramsPage/Programs'
 import NewsPage from '../../Pages/NewsPage/Newspage'
 import ErrorPage from '../ErrorPage/ErrorPage';
@@ -26,6 +27,7 @@ function App() {
       <Route path='/news' element={<NewsPage/>}/>
       <Route path='/api' element={<ErrorPage/>}/>
       <Route path='/api/chuck-norris' element={<ChuckAPIPage/>}/>
+      <Route path='/api/dog' element={<DogAPI/>}/>
       <Route path='*' element={<ErrorPage/>}/>
       
     </Routes>
