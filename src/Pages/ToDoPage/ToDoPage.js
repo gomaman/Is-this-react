@@ -37,7 +37,6 @@ function ToDoPage() {
             const clickedToDo = newState[targetItemIndex]
             const updatedClickedToDo = {...clickedToDo}
             updatedClickedToDo.done = !updatedClickedToDo.done
-
             newState[targetItemIndex] = updatedClickedToDo
 
             return newState

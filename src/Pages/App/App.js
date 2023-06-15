@@ -8,6 +8,7 @@ import Counter from '../Counter/Counter';
 import ProductsList from '../ProductsPage/ProductsList';
 import CitiesPage from '../CitiesPage/CitiesPage';
 import ToDoPage from '../ToDoPage/ToDoPage';
+import ChuckAPIPage from '../API/ChuckAPIPage/ChuckAPI'
 import NavigationGenerator from '../../components/Navigation/Navigation';
 
 function App() {
@@ -23,7 +24,10 @@ function App() {
       <Route path='/counter' element={<Counter />}/>
       <Route path='/todo' element={<ToDoPage/>}/>
       <Route path='/news' element={<NewsPage/>}/>
+      <Route path='/api' element={<ErrorPage/>}/>
+      <Route path='/api/chuck-norris' element={<ChuckAPIPage/>}/>
       <Route path='*' element={<ErrorPage/>}/>
+      
     </Routes>
 
     

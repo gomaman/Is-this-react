@@ -40,13 +40,11 @@ function ToDoForm({addNewItemHandler, editData}) {
       };
     }
 
-
     addNewItemHandler(newToDoItem)
 
     setTitle("");
     setDescription("");
     setDeadline("");
-    // setIsDone(false)
   }
 
   useEffect(() => {
@@ -69,14 +67,14 @@ function ToDoForm({addNewItemHandler, editData}) {
               name="title"
               placeholder="Task Name"
               value={title}
-              onChange={(event) => setTitle(event.target.value)}
+              onChange={(e) => setTitle(e.target.value)}
             ></input>
           </div>
 
           <div className="task-description-area task-input">
             <textarea
               value={description}
-              onChange={(event) => setDescription(event.target.value)}
+              onChange={(e) => setDescription(e.target.value)}
               type="text"
               name="description"
               placeholder="Task Description"
@@ -89,7 +87,7 @@ function ToDoForm({addNewItemHandler, editData}) {
               type="date"
               placeholder="Task Deadline"
               value={deadline}
-              onChange={(event) => setDeadline(event.target.value)}
+              onChange={(e) => setDeadline(e.target.value)}
             ></input>
           </div>
 
