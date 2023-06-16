@@ -147,6 +147,11 @@ export const NAV_ITEMS = [
         href: "/api/dog",
         text: "Dog"
     },
+
+    {
+        href: "/api/human",
+        text: "Human"
+    },
 ]
 
 

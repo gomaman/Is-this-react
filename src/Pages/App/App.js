@@ -10,6 +10,7 @@ import ProductsList from '../ProductsPage/ProductsList';
 import CitiesPage from '../CitiesPage/CitiesPage';
 import ToDoPage from '../ToDoPage/ToDoPage';
 import ChuckAPIPage from '../API/ChuckAPIPage/ChuckAPI'
+import HumanAPIPage from '../API/HumanAPIPage/HumanAPI'
 import NavigationGenerator from '../../components/Navigation/Navigation';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Route path='/api' element={<ErrorPage/>}/>
       <Route path='/api/chuck-norris' element={<ChuckAPIPage/>}/>
       <Route path='/api/dog' element={<DogAPI/>}/>
+      <Route path='/api/human' element={<HumanAPIPage/>}/>
       <Route path='*' element={<ErrorPage/>}/>
       
     </Routes>
