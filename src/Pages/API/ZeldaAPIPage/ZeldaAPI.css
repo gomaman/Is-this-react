@@ -1,0 +1,33 @@
+.big-data-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-category-container {
+    display: flex;
+}
+
+.category-container {
+    padding: 10px 50px;
+}
+
+.sub-category-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:50%;
+}
+
+.creature-description-container img {
+    width:100%
+}
+
+.creature-description-container {
+    background-color: rgba(247, 221, 190, 0.486);
+    border-radius: 15px;
+    padding: 15px;
+    margin:15px;
+    border:solid black 2px
+}
+
+

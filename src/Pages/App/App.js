@@ -12,6 +12,8 @@ import ToDoPage from '../ToDoPage/ToDoPage';
 import ChuckAPIPage from '../API/ChuckAPIPage/ChuckAPI'
 import HumanAPIPage from '../API/HumanAPIPage/HumanAPI'
 import NavigationGenerator from '../../components/Navigation/Navigation';
+import QuickChart from '../API/QuickChartAPIPage/QuickChartAPI';
+import ZeldaAPI from '../API/ZeldaAPIPage/ZeldaAPI';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
       <Route path='/api/chuck-norris' element={<ChuckAPIPage/>}/>
       <Route path='/api/dog' element={<DogAPI/>}/>
       <Route path='/api/human' element={<HumanAPIPage/>}/>
+      <Route path='/api/chart' element={<QuickChart/>}/>
+      <Route path='/api/zelda' element={<ZeldaAPI/>}/>
       <Route path='*' element={<ErrorPage/>}/>
       
     </Routes>

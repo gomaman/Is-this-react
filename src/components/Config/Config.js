@@ -108,30 +108,30 @@ export const NAV_ITEMS = [
         text: "To Do"
     },
 
-    {
-        href: "/career",
-        text: "Karjeros Centras"
-    },
+    // {
+    //     href: "/career",
+    //     text: "Karjeros Centras"
+    // },
 
     {
         href: "/counter",
         text: "Counter"
     },
 
-    {
-        href: "/about-us",
-        text: "About Us"
-    },
+    // {
+    //     href: "/about-us",
+    //     text: "About Us"
+    // },
 
-    {
-        href: "/contact-us",
-        text: "Contact Us"
-    },
+    // {
+    //     href: "/contact-us",
+    //     text: "Contact Us"
+    // },
 
-    {
-        href: "/news",
-        text: "News"
-    },
+    // {
+    //     href: "/news",
+    //     text: "News"
+    // },
 
     {
         href: "/shop",
@@ -151,6 +151,16 @@ export const NAV_ITEMS = [
     {
         href: "/api/human",
         text: "Human"
+    },
+
+    {
+        href: "/api/chart",
+        text: "QuickChart"
+    },
+
+    {
+        href: "/api/zelda",
+        text: "Zelda API"
     },
 ]
 
